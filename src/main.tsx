@@ -3,6 +3,7 @@ import App from './App.tsx';
 import './index.css';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from './context/AuthContext.tsx';
 
 const theme = createTheme({
   typography: {
@@ -11,9 +12,11 @@ const theme = createTheme({
   },
 });
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </BrowserRouter>
+  <AuthProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </AuthProvider>
 );
