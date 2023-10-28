@@ -9,3 +9,7 @@ body {
   font-family: 'Montserrat', serif;
 }
 
+.image-inverted {
+  filter: invert(100%);
+}
+
