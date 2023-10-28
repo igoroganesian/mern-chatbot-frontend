@@ -3,7 +3,8 @@ import React from "react";
 import Logo from "./common/Logo";
 
 const Header = () => {
-    return <AppBar sx={{ bgcolor: "transparent", position: "static", boxShadow: "none" }}>
+    return <AppBar
+        sx={{ bgcolor: "transparent", position: "static", boxShadow: "none" }}>
         <Toolbar sx={{ display: "flex" }}>
             <Logo />
         </Toolbar>
