@@ -8,17 +8,19 @@ import Home from "./Home";
 import Chat from "./Chat";
 
 function App() {
-  console.log(useAuth()?.isLoggedIn);
+  const auth = useAuth();
 
   return (
     <main>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<Login />} />
-        <Route path="/" element={<Signup />} />
-        <Route path="/" element={<Chat />} />
-        <Route path="/" element={<NotFound />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {auth?.isLoggedIn && auth.user && (
+          <Route path="/chat" element={<Chat />} />
+        )}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
   );
