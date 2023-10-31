@@ -5,12 +5,12 @@ import {
     useEffect,
     useState,
   } from "react";
-//   import {
-//     checkAuthStatus,
-//     loginUser,
-//     logoutUser,
-//     signupUser,
-//   } from "../helpers/api-communicator";
+  import {
+    // checkAuthStatus,
+    loginUser,
+    // logoutUser,
+    // signupUser,
+  } from "../helpers/api-communicator";
 
   type User = {
     name: string;
