@@ -6,10 +6,10 @@ import {
     useState,
   } from "react";
   import {
-    // checkAuthStatus,
+    checkAuthStatus,
     loginUser,
-    // logoutUser,
-    // signupUser,
+    logoutUser,
+    signupUser,
   } from "../helpers/api-communicator";
 
   type User = {

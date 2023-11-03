@@ -4,6 +4,7 @@ import './index.css';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext.tsx';
+import { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 
 axios.defaults.baseURL = "http://localhost:5173/api/v1";
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <AuthProvider>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
+        <Toaster position='top-right' />
         <App />
       </ThemeProvider>
     </BrowserRouter>
